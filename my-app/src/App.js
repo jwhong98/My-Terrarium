@@ -1,20 +1,24 @@
-<<<<<<< HEAD
-import React, {Component} from "react";
-
-
-class App extends Component {
-  render() {
-    return "hi";
-  };
-  
-=======
 import React, { Component } from "react";
+import PlantContainer from "./PlantContainer";
+import PlantHolder from "./PlantHolder";
+import Terrarium from "./Terrarium";
+import plants from "./plants";
 
-class App extends Component {
-    render() {
-        return "Hello";
-    }
->>>>>>> f97e36f5912e4816ee8ee760b8ee89a51fc5bd90
+function createContainer(plant) {
+  return (
+        <PlantContainer className="container left" key={plant.id} img={plant.imgURL}/>
+    
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1 className="heading">My Terrarium</h1>
+      <img alt="plant1" src={process.env.PUBLIC_URL + "assets/images/plant1.png"}/>
+      {plants.map(createContainer)}
+    </div>
+  );
 }
 
 export default App;
