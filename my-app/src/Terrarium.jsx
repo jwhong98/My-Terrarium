@@ -1,6 +1,6 @@
 import React from "react";
 
-function Terrarium() {
+const Terrarium = () => {
     return <div></div>;
 }
 

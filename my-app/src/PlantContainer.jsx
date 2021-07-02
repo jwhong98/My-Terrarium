@@ -1,11 +1,8 @@
 import React from "react";
 import PlantHolder from "./PlantHolder";
 
-function PlantContainer(props) {
-    return <div>
-            <PlantHolder img={props.img} />
-
-            </div>
+const PlantContainer = (props) => {
+    return <PlantHolder className="plantHolder" img={props.img} />      
 }
 
 export default PlantContainer;
